@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kairós Fretes e Transportes</title>
+    <meta name="description" content="Pequenos fretes, mudanças e transporte de móveis no Distrito Federal e Entorno desde 2013. Peça seu orçamento pelo WhatsApp.">
+    <meta name="theme-color" content="#121B33">
+    <link rel="icon" type="image/png" href="imagens/logo/logo.png">
+
+    <!-- Fontes: Quicksand (logo), Plus Jakarta Sans (títulos) e Inter (textos) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&family=Quicksand:wght@600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Barra fina no topo que mostra o quanto da página já foi rolado -->
+    <div class="barra-progresso" aria-hidden="true"><span id="barraProgresso"></span></div>
+
+    <!-- ===== CABEÇALHO ===== -->
+    <header id="cabecalho">
+        <nav class="container">
+            <a href="#inicio" class="logo">
+                <img src="imagens/logo/logo.png" alt="" width="36" height="36">
+                <span>Kairós <b>Fretes</b></span>
+            </a>
+            <ul id="navLinks" class="nav-links">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#como-funciona">Como Funciona</a></li>
+                <li><a href="#fotos">Trabalhos</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li class="nav-cta-mobile"><a href="https://wa.me/5561998009600?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20frete.%20Vim%20pelo%20site." target="_blank" rel="noopener">Pedir orçamento</a></li>
+            </ul>
+            <a href="https://wa.me/5561998009600?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20frete.%20Vim%20pelo%20site." class="nav-cta" target="_blank" rel="noopener">Pedir orçamento</a>
+            <button id="menuToggle" class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section id="inicio" class="hero">
+        <!-- Camadas decorativas do fundo: brilho, grade e linhas de estrada -->
+        <div class="hero-fundo" aria-hidden="true">
+            <span class="hero-brilho hero-brilho-1"></span>
+            <span class="hero-brilho hero-brilho-2"></span>
+            <span class="hero-grade"></span>
+        </div>
+
+        <div class="container hero-grid">
+
+            <!-- Coluna do texto -->
+            <div class="hero-content">
+                <span class="etiqueta etiqueta-escura" data-revelar>
+                    <span class="ponto-pulso"></span>
+                    Fretes no DF e Entorno desde 2013
+                </span>
+
+                <h1 data-revelar>Conectando destinos com <span class="linha-palavra-animada"><span id="palavraAnimada" class="destaque"></span><span class="cursor-digitacao">|</span></span></h1>
+
+                <p data-revelar>Do carregamento à entrega, tratamos seus pertences com o cuidado e a dedicação que eles merecem. Peça seu orçamento sem compromisso!</p>
+
+                <div class="hero-acoes" data-revelar>
+                    <a href="https://wa.me/5561998009600?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20frete.%20Vim%20pelo%20site." class="btn-cta btn-brilho" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 1.67c2.19 0 4.25.85 5.79 2.4a8.2 8.2 0 0 1 2.42 5.84c0 4.55-3.71 8.25-8.26 8.25a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-3.12.82.83-3.04-.2-.31a8.18 8.18 0 0 1-1.26-4.38c0-4.55 3.71-8.26 8.28-8.26Zm-4.5 4.4c-.17 0-.44.06-.67.32-.23.25-.87.86-.87 2.09 0 1.23.9 2.42 1.02 2.58.13.17 1.75 2.8 4.33 3.82 2.14.85 2.58.68 3.04.64.47-.04 1.5-.61 1.71-1.2.21-.59.21-1.09.15-1.2-.06-.11-.23-.17-.48-.3-.25-.13-1.5-.74-1.73-.83-.23-.08-.4-.13-.57.13-.17.25-.65.83-.8 1-.15.17-.29.19-.55.06-.25-.13-1.06-.39-2.02-1.24-.75-.66-1.25-1.48-1.4-1.73-.15-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.57-1.4-.79-1.91-.2-.5-.41-.43-.57-.44-.15-.01-.32-.01-.49-.01Z"></path></svg>
+                        Solicitar Orçamento
+                    </a>
+                    <a href="#servicos" class="btn-secundario">Ver serviços</a>
+                </div>
+
+                <ul class="hero-provas" data-revelar>
+                    <li>
+                        <span class="estrelas" aria-hidden="true">★★★★★</span>
+                        <span><b>+170</b> avaliações no Google</span>
+                    </li>
+                    <li><span><b>+3.000</b> entregas feitas</span></li>
+                    <li><span>Emitimos <b>nota fiscal</b></span></li>
+                </ul>
+            </div>
+
+            <!-- Coluna da cena 3D (o caminhão é desenhado pelo arquivo js/frete3d.js) -->
+            <div class="hero-3d" id="hero3d">
+                <canvas id="cena3d" aria-label="Animação 3D de uma picape da Kairós Fretes carregada de caixas"></canvas>
+                <!-- Se o navegador não suportar 3D, mostramos o banner no lugar -->
+                <img class="hero-3d-reserva" src="imagens/banner/bannerKairosFretes.webp" alt="Caminhão da Kairós Fretes carregado">
+
+                <div class="selo-flutuante selo-1">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                    Carga protegida
+                </div>
+                <div class="selo-flutuante selo-2">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+                    Pontualidade
+                </div>
+            </div>
+
+        </div>
+
+        <a href="#servicos" class="rolar-indicador" aria-label="Rolar para os serviços"><span></span></a>
+    </section>
+
+    <!-- ===== FAIXA ANIMADA (letreiro que corre de lado) ===== -->
+    <!-- O conteúdo aparece duas vezes para o loop da animação não ter "pulo" -->
+    <div class="faixa-servicos" aria-hidden="true">
+        <div class="faixa-trilho"><span>Pequenas mudanças</span><i></i><span>Transporte de móveis</span><i></i><span>Eletrodomésticos</span><i></i><span>Motocicletas</span><i></i><span>Encomendas</span><i></i><span>Compras</span><i></i><span>Materiais de construção</span><i></i><span>Cargas especiais</span><i></i><span>Pequenas mudanças</span><i></i><span>Transporte de móveis</span><i></i><span>Eletrodomésticos</span><i></i><span>Motocicletas</span><i></i><span>Encomendas</span><i></i><span>Compras</span><i></i><span>Materiais de construção</span><i></i><span>Cargas especiais</span><i></i></div>
+    </div>
+
+    <!-- ===== SERVIÇOS ===== -->
+    <section id="servicos" class="servicos">
+        <div class="container">
+            <div class="secao-topo" data-revelar>
+                <span class="etiqueta">Serviços</span>
+                <h2>Transporte para <span class="destaque">tudo</span> que você precisa!</h2>
+                <p class="section-subtitle">Mudanças, móveis, motocicletas, máquinas, equipamentos e outros transportes com rapidez, cuidado e segurança.</p>
+            </div>
+
+            <div class="servicos-grid">
+
+                <div class="card" data-revelar data-inclinar>
+                    <div class="card-icone">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4a2 2 0 0 0 1-1.73Z"></path><path d="m3.3 7 8.7 5 8.7-5"></path><line x1="12" y1="22" x2="12" y2="12"></line></svg>
+                    </div>
+                    <h3>Pequenas Mudanças</h3>
+                    <p>Transportes residenciais e comerciais, com rapidez e cuidado para mudanças de pequeno porte.</p>
+                </div>
+
+                <div class="card" data-revelar data-inclinar>
+                    <div class="card-icone">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 9V6a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v3"></path><path d="M3 16v-3a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v3"></path><path d="M5 18v2"></path><path d="M19 18v2"></path><path d="M4 15v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4"></path></svg>
+                    </div>
+                    <h3>Transporte de Móveis</h3>
+                    <p>Levamos seus móveis com segurança até o destino.</p>
+                </div>
+
+                <div class="card" data-revelar data-inclinar>
+                    <div class="card-icone">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"></rect><line x1="5" y1="10" x2="19" y2="10"></line><line x1="9" y1="6" x2="9" y2="8"></line><line x1="9" y1="14" x2="9" y2="16"></line></svg>
+                    </div>
+                    <h3>Eletrodomésticos</h3>
+                    <p>Transporte cuidadoso de geladeiras, fogões, máquinas de lavar e mais.</p>
+                </div>
+
+                <div class="card" data-revelar data-inclinar>
+                    <div class="card-icone">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"></path><circle cx="7.5" cy="7.5" r="1" fill="currentColor"></circle></svg>
+                    </div>
+                    <h3>Encomendas</h3>
+                    <p>Entrega rápida de encomendas dentro da região atendida.</p>
+                </div>
+
+                <div class="card" data-revelar data-inclinar>
+                    <div class="card-icone">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                    </div>
+                    <h3>Compras</h3>
+                    <p>Buscamos suas compras e levamos até você.</p>
+                </div>
+
+                <!-- Último card vira um convite para falar no WhatsApp -->
+                <a class="card card-destaque" data-revelar data-inclinar href="https://wa.me/5561998009600?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20frete.%20Vim%20pelo%20site." target="_blank" rel="noopener">
+                    <div class="card-icone">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path><path d="M15 18H9"></path><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"></path><circle cx="17" cy="18" r="2"></circle><circle cx="7" cy="18" r="2"></circle></svg>
+                    </div>
+                    <h3>Não encontrou seu transporte?</h3>
+                    <p>Precisa levar algo diferente? Fale conosco e encontramos a melhor solução para você.</p>
+                    <span class="card-link">Falar com a gente
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                    </span>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== COMO FUNCIONA ===== -->
+    <section id="como-funciona" class="como-funciona">
+        <div class="container">
+            <div class="secao-topo" data-revelar>
+                <span class="etiqueta">Como funciona</span>
+                <h2>Do orçamento à entrega, <span class="destaque">sem dor de cabeça!</span></h2>
+                <p class="section-subtitle">Você explica o que precisa. Nós cuidamos do transporte.</p>
+            </div>
+
+            <ol class="linha-tempo" id="linhaTempo">
+                <!-- Trilho com a "estrada" que se preenche conforme a rolagem -->
+                <span class="linha-tempo-trilho" id="linhaTempoTrilho" aria-hidden="true">
+                    <span id="linhaTempoProgresso"></span>
+                    <!-- caminhão que anda pelo trilho conforme a rolagem -->
+                    <span class="linha-tempo-caminhao" id="linhaTempoCaminhao"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path><path d="M15 18H9"></path><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"></path><circle cx="17" cy="18" r="2"></circle><circle cx="7" cy="18" r="2"></circle></svg></span>
+                </span>
+                <li data-revelar>
+                    <div class="linha-tempo-icone">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>
+                        <span class="linha-tempo-numero">1</span>
+                    </div>
+                    <h3>Solicite o orçamento</h3>
+                    <p>Entre em contato pelo WhatsApp e conte o que você precisa transportar.</p>
+                </li>
+                <li data-revelar>
+                    <div class="linha-tempo-icone">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        <span class="linha-tempo-numero">2</span>
+                    </div>
+                    <h3>Informe origem e destino</h3>
+                    <p>Diga de onde e para onde o frete deve ser feito.</p>
+                </li>
+                <li data-revelar>
+                    <div class="linha-tempo-icone">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg>
+                        <span class="linha-tempo-numero">3</span>
+                    </div>
+                    <h3>Receba o orçamento</h3>
+                    <p>Enviamos o valor do frete rapidamente.</p>
+                </li>
+                <li data-revelar>
+                    <div class="linha-tempo-icone">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M3 10h18"></path><path d="m9 16 2 2 4-4"></path></svg>
+                        <span class="linha-tempo-numero">4</span>
+                    </div>
+                    <h3>Combine o horário</h3>
+                    <p>Escolhemos juntos a melhor data e horário para o serviço.</p>
+                </li>
+                <li data-revelar>
+                    <div class="linha-tempo-icone">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
+                        <span class="linha-tempo-numero">5</span>
+                    </div>
+                    <h3>Frete realizado</h3>
+                    <p>Nossa equipe realiza o transporte com cuidado e agilidade.</p>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- ===== FOTOS ===== -->
+    <section id="fotos" class="fotos">
+        <div class="container">
+            <div class="secao-topo" data-revelar>
+                <span class="etiqueta">Trabalhos</span>
+                <h2>Nosso trabalho <span class="destaque">na prática!</span></h2>
+                <p class="section-subtitle">Veja alguns dos transportes que já realizamos. Clique numa foto para ampliar.</p>
+            </div>
+
+            <div class="fotos-carrossel" data-revelar>
+                <button id="fotoAnterior" class="carrossel-seta carrossel-seta-anterior" aria-label="Foto anterior">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>
+                </button>
+
+                <div class="fotos-mosaico">
+                    <div class="fotos-mosaico-superior">
+                        <figure class="foto-slot foto-slot-grande" data-slot="0">
+                            <img src="" alt="">
+                            <figcaption class="foto-legenda"><span class="foto-icone"></span><span class="foto-texto"></span></figcaption>
+                        </figure>
+                        <figure class="foto-slot foto-slot-topo-direita" data-slot="1">
+                            <img src="" alt="">
+                            <figcaption class="foto-legenda"><span class="foto-icone"></span><span class="foto-texto"></span></figcaption>
+                        </figure>
+                        <figure class="foto-slot foto-slot-baixo-direita" data-slot="2">
+                            <img src="" alt="">
+                            <figcaption class="foto-legenda"><span class="foto-icone"></span><span class="foto-texto"></span></figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="fotos-mosaico-inferior">
+                        <figure class="foto-slot foto-slot-pequena" data-slot="3">
+                            <img src="" alt="">
+                            <figcaption class="foto-legenda"><span class="foto-icone"></span><span class="foto-texto"></span></figcaption>
+                        </figure>
+                        <figure class="foto-slot foto-slot-pequena" data-slot="4">
+                            <img src="" alt="">
+                            <figcaption class="foto-legenda"><span class="foto-icone"></span><span class="foto-texto"></span></figcaption>
+                        </figure>
+                        <figure class="foto-slot foto-slot-pequena" data-slot="5">
+                            <img src="" alt="">
+                            <figcaption class="foto-legenda"><span class="foto-icone"></span><span class="foto-texto"></span></figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <button id="fotoProxima" class="carrossel-seta carrossel-seta-proxima" aria-label="Próxima foto">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+                </button>
+            </div>
+
+            <div class="fotos-mensagem" data-revelar>
+                <h3>Cada transporte é feito com cuidado</h3>
+                <p>Do carregamento à entrega, cuidamos da sua carga para que ela chegue ao destino com segurança.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== AVALIAÇÕES ===== -->
+    <section id="avaliacoes" class="avaliacoes">
+        <div class="container">
+            <div class="secao-topo" data-revelar>
+                <span class="etiqueta">Avaliações</span>
+                <h2>O que nossos <span class="destaque">clientes</span> dizem</h2>
+            </div>
+
+            <div class="avaliacoes-carrossel-wrapper" data-revelar>
+                <button id="avaliacoesAnterior" type="button" class="avaliacoes-seta" aria-label="Ver avaliação anterior">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>
+                </button>
+
+                <div id="avaliacoesCarrossel" class="avaliacoes-carrossel">
+                    <figure class="avaliacoes-item"><img src="imagens/avaliacoes/feedback1.webp" width="471" height="387" decoding="async" alt="Avaliação 5 estrelas de Paulo César Alves Dos Santos sobre a Kairós Fretes"></figure>
+                    <figure class="avaliacoes-item"><img src="imagens/avaliacoes/feedback2.webp" width="472" height="305" decoding="async" alt="Avaliação 5 estrelas de Patricia Alves sobre a Kairós Fretes"></figure>
+                    <figure class="avaliacoes-item"><img src="imagens/avaliacoes/feedback3.webp" width="477" height="297" decoding="async" alt="Avaliação 5 estrelas de Otávio Miranda sobre a Kairós Fretes"></figure>
+                    <figure class="avaliacoes-item"><img src="imagens/avaliacoes/feedback4.webp" width="472" height="192" decoding="async" alt="Avaliação 5 estrelas de Giovanna Cavalcante sobre a Kairós Fretes"></figure>
+                    <figure class="avaliacoes-item"><img src="imagens/avaliacoes/feedback5.webp" width="467" height="192" decoding="async" alt="Avaliação 5 estrelas de Laio Seixas sobre a Kairós Fretes"></figure>
+                    <figure class="avaliacoes-item"><img src="imagens/avaliacoes/feedback6.webp" width="482" height="270" decoding="async" alt="Avaliação 5 estrelas de Jordano Otoni sobre a Kairós Fretes"></figure>
+                    <figure class="avaliacoes-item"><img src="imagens/avaliacoes/feedback7.webp" width="492" height="231" decoding="async" alt="Avaliação 5 estrelas de Isabela Graton sobre a Kairós Fretes"></figure>
+                    <figure class="avaliacoes-item"><img src="imagens/avaliacoes/feedback8.webp" width="482" height="225" decoding="async" alt="Avaliação 5 estrelas de Fernanda Lobato sobre a Kairós Fretes"></figure>
+                    <figure class="avaliacoes-item"><img src="imagens/avaliacoes/feedback9.webp" width="476" height="192" decoding="async" alt="Avaliação 5 estrelas de Evelyn Matos sobre a Kairós Fretes"></figure>
+                </div>
+
+                <button id="avaliacoesProxima" type="button" class="avaliacoes-seta" aria-label="Ver próxima avaliação">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+                </button>
+            </div>
+
+            <p class="avaliacoes-mais" data-revelar>
+                <span class="estrelas" aria-hidden="true">★★★★★</span>
+                E ainda temos mais de <strong>170 avaliações reais</strong> no Google da nossa empresa.
+            </p>
+        </div>
+    </section>
+
+    <!-- ===== NÚMEROS DA EMPRESA ===== -->
+    <!-- data-contar = número final da contagem animada (feita no script.js) -->
+    <section id="numeros" class="numeros">
+        <div class="container numeros-grid">
+            <div class="numero-item" data-revelar>
+                <span class="numero-valor">+<span data-contar="3000">3.000</span></span>
+                <span class="numero-legenda">Entregas realizadas</span>
+            </div>
+            <div class="numero-item" data-revelar>
+                <span class="numero-valor">+<span data-contar="3000">3.000</span></span>
+                <span class="numero-legenda">Clientes atendidos</span>
+            </div>
+            <div class="numero-item" data-revelar>
+                <span class="numero-valor">Desde <span data-contar="2013" data-sem-ponto>2013</span></span>
+                <span class="numero-legenda">Realizando fretes com confiança</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== REGIÃO ATENDIDA ===== -->
+    <section id="regiao" class="regiao">
+        <div class="container">
+            <div class="secao-topo" data-revelar>
+                <span class="etiqueta">Região</span>
+                <h2>Onde a Kairós Fretes <span class="destaque">atende?</span></h2>
+                <p class="section-subtitle">Atendemos todo o Distrito Federal, Entorno e Demais localidades.</p>
+            </div>
+
+            <!-- Rota animada: o caminhãozinho percorre a linha tracejada -->
+            <div class="rota" aria-hidden="true" data-revelar>
+                <svg class="rota-svg" viewBox="0 0 1000 120" preserveAspectRatio="none">
+                    <path id="rotaCaminho" d="M10 100 C 120 20, 220 20, 330 70 S 540 130, 660 60 S 880 10, 990 70" />
+                </svg>
+                <!-- os pinos de cada cidade são posicionados na curva pelo script.js -->
+                <span class="rota-caminhao">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path><path d="M15 18H9"></path><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"></path><circle cx="17" cy="18" r="2"></circle><circle cx="7" cy="18" r="2"></circle></svg>
+                </span>
+            </div>
+
+            <!-- Lista escondida na tela (só leitores de tela leem); o script usa os nomes para criar os pinos -->
+            <ul class="regiao-cidades somente-leitor" id="regiaoCidades">
+                <li>Brasília</li>
+                <li>Taguatinga</li>
+                <li>Ceilândia</li>
+                <li>Samambaia</li>
+                <li>Guará</li>
+                <li>Sobradinho</li>
+                <li>Demais Localidades</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ===== CONTATO ===== -->
+    <section id="contato" class="contato">
+        <div class="container contato-grid">
+
+            <div class="contato-info" data-revelar>
+                <span class="etiqueta etiqueta-escura">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>
+                    Atendimento Rápido
+                </span>
+
+                <h2>Vamos fazer <span class="contato-destaque">seu frete?</span></h2>
+                <p>Fale agora mesmo com a gente e receba seu orçamento <strong>em poucos minutos.</strong></p>
+
+                <div class="contato-beneficios">
+                    <div class="contato-beneficio">
+                        <div class="contato-beneficio-icone">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8Z"></path></svg>
+                        </div>
+                        <div>
+                            <h4>Resposta rápida</h4>
+                            <p>Atendimento ágil pelo WhatsApp</p>
+                        </div>
+                    </div>
+                    <div class="contato-beneficio">
+                        <div class="contato-beneficio-icone">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                        </div>
+                        <div>
+                            <h4>Emitimos nota fiscal</h4>
+                            <p>Serviço com nota fiscal, segurança e transparência</p>
+                        </div>
+                    </div>
+                    <div class="contato-beneficio">
+                        <div class="contato-beneficio-icone">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path></svg>
+                        </div>
+                        <div>
+                            <h4>Fretes com segurança</h4>
+                            <p>Cuidado e responsabilidade em cada entrega</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="https://wa.me/5561998009600?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20frete.%20Vim%20pelo%20site." class="btn-cta btn-brilho" target="_blank" rel="noopener">
+                    Falar no WhatsApp
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                </a>
+            </div>
+
+            <!-- Orçamento rápido: monta a mensagem e abre o WhatsApp já preenchido -->
+            <form class="orcamento-card" id="formOrcamento" data-revelar>
+                <div class="orcamento-topo">
+                    <div class="orcamento-topo-icone">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path><path d="M15 18H9"></path><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62l-3.48-4.35A1 1 0 0 0 17.52 8H14"></path><circle cx="17" cy="18" r="2"></circle><circle cx="7" cy="18" r="2"></circle></svg>
+                    </div>
+                    <div>
+                        <h3>Orçamento rápido</h3>
+                        <p>Preencha e a mensagem chega pronta no nosso WhatsApp.</p>
+                    </div>
+                </div>
+
+                <fieldset class="orcamento-tipos">
+                    <legend>O que vamos levar?</legend>
+                        <label class="orcamento-chip"><input type="radio" name="tipo" value="Mudança" checked><span>Mudança</span></label>
+                        <label class="orcamento-chip"><input type="radio" name="tipo" value="Móveis"><span>Móveis</span></label>
+                        <label class="orcamento-chip"><input type="radio" name="tipo" value="Moto"><span>Moto</span></label>
+                        <label class="orcamento-chip"><input type="radio" name="tipo" value="Máquinas"><span>Máquinas</span></label>
+                        <label class="orcamento-chip"><input type="radio" name="tipo" value="Outro"><span>Outro</span></label>
+                </fieldset>
+
+                <div class="orcamento-rota">
+                    <label class="orcamento-campo">
+                        <span>Saindo de</span>
+                        <input type="text" name="origem" placeholder="Ex.: Taguatinga" autocomplete="address-level2">
+                    </label>
+                    <label class="orcamento-campo">
+                        <span>Indo para</span>
+                        <input type="text" name="destino" placeholder="Ex.: Asa Sul" autocomplete="off">
+                    </label>
+                </div>
+
+                <label class="orcamento-campo">
+                    <span>Detalhes <em>(opcional)</em></span>
+                    <input type="text" name="detalhes" placeholder="Ex.: geladeira e 10 caixas, sábado de manhã">
+                </label>
+
+                <button type="submit" class="btn-cta btn-brilho orcamento-enviar">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>
+                    Enviar pelo WhatsApp
+                </button>
+
+                <div class="orcamento-redes">
+                    <a href="https://www.instagram.com/pequenosfretesdf?igsi=MWVjODEwdm9kNWtqaQ==" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37a4 4 0 1 1-7.914 1.174 4 4 0 0 1 7.914-1.174z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        Instagram
+                    </a>
+                    <a href="tel:+5561998009600">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        61 99800-9600
+                    </a>
+                    <a href="https://www.facebook.com/share/1Je16hbvjQ/?mibextid=wwXIfr" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                        Facebook
+                    </a>
+                </div>
+            </form>
+
+        </div>
+    </section>
+
+    <!-- ===== RODAPÉ ===== -->
+    <footer>
+        <!-- Assinatura gigante da marca (decorativa) -->
+        <div class="rodape-marca" aria-hidden="true">KAIRÓS</div>
+        <div class="container rodape">
+            <a href="#inicio" class="logo">
+                <img src="imagens/logo/logo.png" alt="" width="32" height="32">
+                <span>Kairós <b>Fretes</b></span>
+            </a>
+            <p>&copy; <span id="ano"></span> Kairós Fretes. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Botão flutuante de WhatsApp -->
+    <a href="https://wa.me/5561998009600?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20frete.%20Vim%20pelo%20site." class="whatsapp-flutuante" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 1.67c2.19 0 4.25.85 5.79 2.4a8.2 8.2 0 0 1 2.42 5.84c0 4.55-3.71 8.25-8.26 8.25a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-3.12.82.83-3.04-.2-.31a8.18 8.18 0 0 1-1.26-4.38c0-4.55 3.71-8.26 8.28-8.26Zm-4.5 4.4c-.17 0-.44.06-.67.32-.23.25-.87.86-.87 2.09 0 1.23.9 2.42 1.02 2.58.13.17 1.75 2.8 4.33 3.82 2.14.85 2.58.68 3.04.64.47-.04 1.5-.61 1.71-1.2.21-.59.21-1.09.15-1.2-.06-.11-.23-.17-.48-.3-.25-.13-1.5-.74-1.73-.83-.23-.08-.4-.13-.57.13-.17.25-.65.83-.8 1-.15.17-.29.19-.55.06-.25-.13-1.06-.39-2.02-1.24-.75-.66-1.25-1.48-1.4-1.73-.15-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.57-1.4-.79-1.91-.2-.5-.41-.43-.57-.44-.15-.01-.32-.01-.49-.01Z"></path></svg>
+    </a>
+
+    <!-- ===== VISUALIZADOR DE FOTO EM TELA CHEIA (LIGHTBOX) ===== -->
+    <div id="lightbox" class="lightbox">
+        <button id="lightboxFechar" class="lightbox-fechar" aria-label="Fechar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+        </button>
+        <button id="lightboxAnterior" class="lightbox-seta lightbox-seta-anterior" aria-label="Foto anterior">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>
+        </button>
+        <div class="lightbox-conteudo">
+            <img id="lightboxImagem" src="" alt="">
+            <p id="lightboxLegenda" class="lightbox-legenda"></p>
+            <span class="lightbox-dica">Clique na foto para dar zoom</span>
+        </div>
+        <button id="lightboxProxima" class="lightbox-seta lightbox-seta-proxima" aria-label="Próxima foto">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+        </button>
+    </div>
+
+    <!-- Bibliotecas (ficam na pasta js/libs, então o site funciona sem depender de CDN):
+         three.js = 3D | GSAP + ScrollTrigger = animações ligadas à rolagem -->
+    <script src="js/libs/three.min.js" defer></script>
+    <script src="js/libs/gsap.min.js" defer></script>
+    <script src="js/libs/ScrollTrigger.min.js" defer></script>
+    <script src="js/frete3d.js" defer></script>
+    <script src="script.js" defer></script>
+    <script src="js/efeitos-premium.js" defer></script>
+
+</body>
+
+</html>
